@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:3.6-slim
 
-RUN apt-get update && apt-get install wget zip
+RUN apt-get update && apt-get install -y wget zip
 
 # Set the working directory to /app
 WORKDIR /
