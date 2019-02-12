@@ -5,7 +5,7 @@ FROM python:3.6-slim
 WORKDIR /
 
 # Install any needed packages specified in requirements.txt
-RUN pip install scikit-learn nilearn matplotlib
+RUN pip install scikit-learn nilearn matplotlib wget
 
 ADD plot_3d_and_4d_niimg_nogui.py /.      	
 
