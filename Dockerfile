@@ -10,6 +10,7 @@ WORKDIR /
 RUN pip install scikit-learn nilearn matplotlib 
 
 ADD plot_3d_and_4d_niimg_nogui.py /.      	
+ADD test.sh /.
 
 # Run app.py when the container launches
-CMD ["python", "plot_3d_and_4d_niimg_nogui.py"]
+CMD ["./test.sh", "/iexec", "image_"]
