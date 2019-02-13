@@ -4,8 +4,10 @@
 
 Here we discover how to work with 3D and 4D niimgs.
 """
-dir="/iexec" 
-prefix="image_"
+import sys
+
+dir=sys.argv[1];
+prefix=sys.argv[2];
 idx=0;
 
 ###############################################################################
@@ -44,6 +46,9 @@ display.savefig(dir + '/' + prefix + str(idx))
 display = plotting.plot_stat_map(tmap_filename, threshold=3)
 idx+=1
 display.savefig(dir+'/'+prefix+str(idx))
+
+# Warning, to limit the size of data input,we stop the script here    
+exit()
 
 ###############################################################################
 # Visualizing one volume in a 4D file
