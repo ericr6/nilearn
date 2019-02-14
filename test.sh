@@ -4,18 +4,17 @@ arg1=$1
 #prefix for images 
 arg2=$2
 #Data input for nilearn.zip
-FILE=/iexec/nilearn_data.zip
+NIDIR=/iexec/nilearn_data
 DATAPATH_NILEARN=~/. 
 
-echo "ls ${FILE}"
-ls $FILE
+echo "ls ${NIDIR}"
+ls $NIDIR
 
 # wget https://transfer.sh/wTlV3/input_nilearn.zip
-if [ -f $FILE ]; then
+if [ -d $NIDIR ]; then
   echo "data input exists"  
-  unzip -o $FILE
-  mv nilearn_data $DATAPATH_NILEARN
-  echo "copy file in ${DATAPATH_NILEARN}"
+  mv $NIDIR $DATAPATH_NILEARN
+  echo "copy files in ${DATAPATH_NILEARN}"
 else 
   echo "data not found ... download"  
 fi
