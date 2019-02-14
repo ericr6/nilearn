@@ -7,12 +7,17 @@ arg2=$2
 FILE=/iexec/nilearn_data.zip
 DATAPATH_NILEARN=~/. 
 
+echo "ls ${FILE}"
+ls $FILE
+
 # wget https://transfer.sh/wTlV3/input_nilearn.zip
 if [ -f $FILE ]; then
   echo "data input exists"  
   unzip -o $FILE
   mv nilearn_data $DATAPATH_NILEARN
   echo "copy file in ${DATAPATH_NILEARN}"
+else 
+  echo "data not found ... download"  
 fi
 
 # args 1 is the directory where to save image , args 2 is the prefix for images.
