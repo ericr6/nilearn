@@ -18,7 +18,7 @@ idx=0;
 #
 # Let's first check where the data is downloaded on our disk:
 from nilearn import datasets
-print('Datasets are stored in: %r' % datasets.get_data_dirs("/home/eric/wdir/wdir_nilearn/inputdata/"))
+print('Datasets are stored in: %r' % datasets.get_data_dirs())
 
 ###############################################################################
 # Let's now retrieve a motor contrast from a Neurovault repository
