@@ -13,4 +13,4 @@ ADD plot_3d_and_4d_niimg_nogui.py /.
 ADD test.sh /.
 
 # Run app.py when the container launches
-CMD ["./test.sh", "/iexec", "image_"]
+CMD ["./test.sh", "/iexec_out", "image_"]
