@@ -3,7 +3,7 @@
 arg1=$1
 #prefix for images 
 arg2=$2
-#Data input for nilearn.zip
+
 NIDIR=/iexec_in/nilearn_data
 DATAPATH_NILEARN=~/. 
 
