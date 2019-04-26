@@ -10,8 +10,9 @@ WORKDIR /
 RUN pip install scikit-learn nilearn matplotlib 
 
 # Add program file and data management
-ADD plot_3d_and_4d_niimg_nogui.py /.      	
-ADD test.sh /.
+COPY plot_3d_and_4d_niimg_nogui.py /.      	
+COPY ./entrypoint.sh /.
+RUN chmod +x /entrypoint.sh
 
 # Run app.py when the container launches
-CMD ["./test.sh", "/iexec_out", "image_"]
+ENTRYPOINT ["/entrypoint.sh"]
