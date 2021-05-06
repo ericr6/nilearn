@@ -14,3 +14,5 @@ else
 fi
 
 python3 plot_3d_and_4d_niimg_nogui.py /iexec_out image_
+
+echo "{ \"deterministic-output-path\" : \"/iexec_out/image_1.png\" }" > /iexec_out/computed.json
